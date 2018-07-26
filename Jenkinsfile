@@ -6,6 +6,10 @@ pipeline {
          string(name: 'test_prod', defaultValue: '54.174.3.103', description: 'Production Server')
     }
 
+    tools{
+        maven 'localMaven'
+    }
+
     triggers {
          pollSCM('* * * * *')
      }
